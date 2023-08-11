@@ -1,43 +1,43 @@
-# [CaseParser 2](https://github.com/NandoMB/caseparser)
+# @agorbatchev/caseparser (fork of [caseparser](https://github.com/NandoMB/caseparser))
+
 Convert **Strings** and **JSON (Object Keys)** from a **case type** to another one with **type inference** based on parameter's type.
 
+## Fork. What's different?
 
-###### Note:
->  This is the **version 2.x.x** that supports **Typescript**. If you're looking for version 1.x.x, [click here](https://github.com/NandoMB/caseparser/tree/v1.x.x) to see the docs.
-
+This package is tree-shakable.
 
 ## Installation
 
-###### Yarn
 ```sh
 yarn add caseparser
-```
-###### NPM
-```sh
+# or
 npm add caseparser
-```
-###### PNPM
-```sh
+# or
 pnpm add caseparser
 ```
 
 ## How to use
 
 ###### Example 1
+
 Passing **String** as parameter:
+
 ```ts
 import { camelToSnake } from 'caseparser';
 
 camelToSnake('loremIpsumIsSimplyDummyTextOfThePrintingAndTypesettingIndustry');
 ```
+
 Will result:
+
 ```ts
 'lorem_ipsum_is_simply_dummy_text_of_the_printing_and_typesetting_industry'
 ```
-<br/>
 
 ###### Example 2
+
 Passing **JSON** as parameter:
+
 ```js
 import { camelToSnake } from 'caseparser';
 
