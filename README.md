@@ -1,19 +1,21 @@
-# @agorbatchev/caseparser (fork of [caseparser](https://github.com/NandoMB/caseparser))
+# @alexgorbatchev/caseparser
 
-Convert **Strings** and **JSON (Object Keys)** from a **case type** to another one with **type inference** based on parameter's type.
+Convert Strings and Object keys from one case type to another with full TypeScript support.
 
 ## Fork. What's different?
 
-This package is tree-shakable.
+This package is a fork of [caseparser](https://github.com/NandoMB/caseparser). Changes:
+
+1. tree-shakable
 
 ## Installation
 
 ```sh
-yarn add caseparser
+yarn add @alexgorbatchev/caseparser
 # or
-npm add caseparser
+npm add @alexgorbatchev/caseparser
 # or
-pnpm add caseparser
+pnpm add @alexgorbatchev/caseparser
 ```
 
 ## How to use
@@ -23,7 +25,7 @@ pnpm add caseparser
 Passing **String** as parameter:
 
 ```ts
-import { camelToSnake } from 'caseparser';
+import { camelToSnake } from '@alexgorbatchev/caseparser';
 
 camelToSnake('loremIpsumIsSimplyDummyTextOfThePrintingAndTypesettingIndustry');
 ```
@@ -39,7 +41,7 @@ Will result:
 Passing **JSON** as parameter:
 
 ```js
-import { camelToSnake } from 'caseparser';
+import { camelToSnake } from '@alexgorbatchev/caseparser';
 
 const data = [
   {
@@ -61,35 +63,34 @@ const data = [
     ]
   }
 ];
+
 const result = camelToSnake(data);
-```
-Will Result:
-```json
-[
-  {
-    "id": 1,
-    "first_name": "John",
-    "last_name": "Doe",
-    "email": "john.doe@example.com",
-    "addresses": [
-      {
-        "country": "United States",
-        "state": "Illinois",
-        "city": "Rockford",
-        "postal_code": "61105",
-        "street": {
-          "street_name": "41 Forest Run Circle",
-          "street_number": "539"
-        }
-      }
-    ]
-  }
-]
+// [
+//   {
+//     "id": 1,
+//     "first_name": "John",
+//     "last_name": "Doe",
+//     "email": "john.doe@example.com",
+//     "addresses": [
+//       {
+//         "country": "United States",
+//         "state": "Illinois",
+//         "city": "Rockford",
+//         "postal_code": "61105",
+//         "street": {
+//           "street_name": "41 Forest Run Circle",
+//           "street_number": "539"
+//         }
+//       }
+//     ]
+//   }
+// ]
 ```
 
 ## Conversion Types
 
 ###### camelCase to ...
+
 ```js
 camelToDash(data);
 camelToPascal(data);
@@ -97,7 +98,9 @@ camelToSnake(data);
 camelToUpperDash(data);
 camelToUpperSnake(data);
 ```
+
 ###### snakeCase to ...
+
 ```js
 snakeToCamel(data);
 snakeToDash(data);
@@ -105,7 +108,9 @@ snakeToPascal(data);
 snakeToUpperDash(data);
 snakeToUpperSnake(data);
 ```
+
 ###### dashCase to ...
+
 ```js
 dashToCamel(data);
 dashToPascal(data);
@@ -113,7 +118,9 @@ dashToSnake(data);
 dashToUpperDash(data);
 dashToUpperSnake(data);
 ```
+
 ###### pascalCase to ...
+
 ```js
 pascalToCamel(data);
 pascalToDash(data);
@@ -121,7 +128,9 @@ pascalToSnake(data);
 pascalToUpperDash(data);
 pascalToUpperSnake(data);
 ```
+
 ###### upperSnakeCase to ...
+
 ```js
 upperSnakeToCamel(data);
 upperSnakeToDash(data);
@@ -129,7 +138,9 @@ upperSnakeToPascal(data);
 upperSnakeToSnake(data);
 upperSnakeToUpperDash(data);
 ```
+
 ###### upperDashCase to ...
+
 ```js
 upperDashToCamel(data);
 upperDashToDash(data);

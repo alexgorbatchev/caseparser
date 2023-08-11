@@ -1,7 +1,7 @@
 {
   "name": "@alexgorbatchev/caseparser",
   "version": "3.0.0",
-  "description": "Convert Strings/Arrays/Objects from a type of case to another one.",
+  "description": "Convert Strings and Object keys from one case type to another with full TypeScript support.",
   "author": "Fernando Machado Bernardino <fernandombernardino@gmail.com>",
   "maintainers": [
     "Alex Gorbatchev <alex.gorbatchev@gmail.com>"
