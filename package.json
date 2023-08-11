@@ -1,16 +1,19 @@
 {
-  "name": "caseparser",
-  "version": "2.1.0",
+  "name": "@alexgorbatchev/caseparser",
+  "version": "3.0.0",
   "description": "Convert Strings/Arrays/Objects from a type of case to another one.",
   "author": "Fernando Machado Bernardino <fernandombernardino@gmail.com>",
+  "maintainers": [
+    "Alex Gorbatchev <alex.gorbatchev@gmail.com>"
+  ],
   "license": "MIT",
-  "homepage": "https://github.com/NandoMB/caseparser#readme",
+  "homepage": "https://github.com/alexgorbatchev/caseparser#readme",
   "bugs": {
-    "url": "https://github.com/NandoMB/caseparser/issues"
+    "url": "https://github.com/alexgorbatchev/caseparser/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NandoMB/caseparser.git"
+    "url": "git+https://github.com/alexgorbatchev/caseparser.git"
   },
   "publishConfig": {
     "access": "public"
@@ -28,12 +31,12 @@
     "release": "pnpm run lint && pnpm run test && pnpm run build && changeset publish"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.26.1",
-    "@types/node": "^18.15.11",
-    "@vitest/coverage-istanbul": "^0.29.8",
-    "tsup": "^6.7.0",
-    "typescript": "^5.0.3",
-    "vitest": "^0.29.8"
+    "@changesets/cli": "^2.26.2",
+    "@types/node": "^20.4.9",
+    "@vitest/coverage-istanbul": "^0.34.1",
+    "tsup": "^7.2.0",
+    "typescript": "^5.1.6",
+    "vitest": "^0.34.1"
   },
   "keywords": [
     "caseparser",
